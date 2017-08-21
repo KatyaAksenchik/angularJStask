@@ -1,0 +1,37 @@
+<div class="row padding-wrapper">
+    <div class="col-md-8 col-md-offset-2">
+        <h4 class="text-center">Weather diary:</h4>
+
+        <form name="infoForm" ng-submit="addWeather()">
+            <div class="form-group">
+                <label class="control-label" for="date">Date:</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"
+                       ng-model="weather.date" required/>
+                <span ng-show="infoForm.date.$invalid && !infoForm.date.$pristine"
+                      class="bg-danger">Date is required.</span>
+            </div>
+            <div class="form-group">
+                <label class="city-select" for="date">City:</label>
+                <select class="form-control" name="city-select" ng-model="weather.idcity">
+                    <option ng-repeat="option in listedcities" value="{{option.idcity}}">{{option.name}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="avarage-temp">Tempreture this date (°C):</label>
+                <input type="text" name="avaragetemp" class="form-control" id="avarage-temp"
+                       ng-model="weather.avarage_temp" placeholder="Tempreture" ng-pattern="/^-?[0-9]\d*(\.\d+)?$/">
+                <span class="bg-danger" ng-show="infoForm.avaragetemp.$invalid && !infoForm.avaragetemp.$pristine">Should be numeric value</span>
+            </div>
+            <div class="form-group">
+                <label for="textarea">Description</label>
+                <textarea class="form-control" id="textarea" rows="3" ng-model="weather.description"
+                          ng-maxlength="number"></textarea>
+            </div>
+            <p>{{weather}}</p>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" ng-disabled="infoForm.$invalid">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+

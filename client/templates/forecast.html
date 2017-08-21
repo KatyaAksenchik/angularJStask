@@ -1,0 +1,18 @@
+<div class="row padding-wrapper">
+    <div class="col-md-3 ">
+        <h4 class="text-right">Weather forecast for:</h4>
+    </div>
+    <div class="col-md-9">
+        <h5>
+            <a ui-sref="main.home.forecast.period({n: '3'})">3 days</a> /
+            <a ui-sref="main.home.forecast.period({n: '7'})">a week</a>
+        </h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="col-md-6 col-md-offset-3">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

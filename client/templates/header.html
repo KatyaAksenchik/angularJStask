@@ -1,0 +1,23 @@
+<div class="row header">
+    <div class="col-md-8">
+        <div class="logo-block">
+            <a class="logo-a" ui-sref="main.home.basic" ui-sref-active="active">
+                <img src="img/logo.png" alt="">
+                <h2 class="logo text-uppercase"> Wheather forecast</h2>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="login-block" ng-if="!logged">
+            <a ui-sref="main.login" ui-sref-active="active">
+                <i class="fa fa-sign-in  fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="auth-user-block" ng-if="logged">
+            <span class="auth-user" ng-if="authUser"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> <span>{{authUser}}</span></span>
+            <button class="btn-logout" ng-click="logout()">
+                <i class="fa fa-sign-out  fa-2x" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>

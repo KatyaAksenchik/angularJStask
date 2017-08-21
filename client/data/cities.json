@@ -1,0 +1,72 @@
+[
+  {
+    "id": 625144,
+    "name": "Minsk",
+    "country": "Belarus",
+    "imgURL": "img/minsk.jpg",
+    "coord": {
+      "lon": 27.566668,
+      "lat": 53.900002
+    }
+  },
+  {
+    "id": 2950159,
+    "name": "Berlin",
+    "imgURL": "img/berlin.jpg",
+    "country": "DE",
+    "coord": {
+      "lon": 13.41053,
+      "lat": 52.524368
+    }
+  },
+  {
+    "id": 703448,
+    "name": "Kiev",
+    "country": "Ukrain",
+    "imgURL": "img/kiev.jpg",
+    "coord": {
+      "lon": 30.516666,
+      "lat": 50.433334
+    }
+  },
+  {
+    "id": 2643744,
+    "name": "London",
+    "country": "Great Britain",
+    "imgURL": "img/london.jpg",
+    "coord": {
+      "lon": -0.08901,
+      "lat": 51.51334
+    }
+  },
+  {
+    "id": 2968815,
+    "name": "Paris",
+    "country": "France",
+    "imgURL": "img/paris.jpg",
+    "coord": {
+      "lon": 2.3486,
+      "lat": 48.853401
+    }
+  },
+  {
+    "id": 524901,
+    "name": "Moscow",
+    "country": "Russian Federation",
+    "imgURL": "img/moscow.jpg",
+    "coord": {
+      "lon": 37.615555,
+      "lat": 55.75222
+    }
+  },
+  {
+    "id": 7531926,
+    "name": "Warszawa",
+    "country": "Poland",
+    "imgURL": "img/warsaw.jpg",
+    "coord": {
+      "lon": 21.061399,
+      "lat": 52.233101
+    }
+  }
+]

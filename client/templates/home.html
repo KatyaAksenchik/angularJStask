@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="padding-wrapper">
+            <h4 class="text-center">Choose city:</h4>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="padding-wrapper">
+            <select class="form-control"
+                    ng-model="selectedItem"
+                    ng-change="getData(selectedItem)"
+                    ng-options="city as city.name for city in cities track by city.idcity">
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <ul id="tabs" data-tabs="tabs" class="nav nav-tabs">
+            <li class="active" data-toggle="tab"><a ui-sref="main.home.basic">Basic info</a></li>
+            <li data-toggle="tab"><a ui-sref="main.home.forecast.period">Forecast</a></li>
+            <li data-toggle="tab"><a ui-sref="main.home.charts">Charts</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div ui-view></div>
+    </div>
+</div>

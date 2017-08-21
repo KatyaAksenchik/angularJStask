@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/"/>
+    <meta charset="UTF-8">
+    <title>Weather Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/js/tab.js"></script>
+
+    <!--d3-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!--angular-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+    <!--js-->
+
+    <!--filters-->
+    <script src="filter/celcium.js"></script>
+
+    <!--Routes-->
+    <script src="app.js"></script>
+
+    <!--Controllers-->
+    <script src="controller/HomeCtrl.js"></script>
+    <script src="controller/PeriodCtrl.js"></script>
+    <script src="controller/weekForecastCtrl.js"></script>
+    <script src="controller/SaveCtrl.js"></script>
+    <script src="controller/ChartCtrl.js"></script>
+    <script src="controller/GraphCtrl.js"></script>
+    <script src="controller/LoginCtrl.js"></script>
+    <script src="controller/SignupCtrl.js"></script>
+    <script src="controller/HeaderCtrl.js"></script>
+
+
+    <!--Services-->
+    <script src="services/weatherService.js"></script>
+    <script src="services/UserService.js"></script>
+
+
+    <!--datepicker-->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+    <!--css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css-->
+
+</head>
+<body ng-app="app">
+<div class="container-fluid">
+    <div ui-view></div>
+</div>
+</body>
+
+</html>

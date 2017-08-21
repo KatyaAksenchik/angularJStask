@@ -1,0 +1,42 @@
+<div class="padding-wrapper">
+    <h4 class="text-center"><strong>Weather in {{selectedItem.name}}, {{selectedItem.country}}  </strong></h4>
+    <h5 class="text-center">{{currentWeather.main.temp | celcium: 1}} , {{currentWeather.weather[0].description}}</h5>
+</div>
+
+<div class="row">
+    <div class="col-md-12 blocks-weather">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1 text-center">
+                <img src="{{selectedItem.imgURL}}">
+            </div>
+            <div class="col-md-6">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <td>Atmospheric pressure</td>
+                        <td>{{currentWeather.main.pressure | number:1}}hPa</td>
+                    </tr>
+                    <tr>
+                        <td>Humidity</td>
+                        <td>{{currentWeather.main.humidity}}%</td>
+                    </tr>
+                    <tr>
+                        <td>Cloudiness</td>
+                        <td>{{currentWeather.wind.deg | number:0}}%</td>
+                    </tr>
+                    <tr>
+                        <td>Sunrise time</td>
+                        <td>{{currentWeather.sys.sunrise*1000 | date : "h:mm a"}}</td>
+                    </tr>
+                    <tr>
+                        <td>Sunset time</td>
+                        <td>{{ currentWeather.sys.sunset*1000 | date : "h:mm a"}}</td>
+                    </tr>
+                    <tr>
+                        <td>Geo coords</td>
+                        <td>[{{currentWeather.coord.lon}},{{currentWeather.coord.lat}}]</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
