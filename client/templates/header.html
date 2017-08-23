@@ -1,10 +1,17 @@
 <div class="row header">
-    <div class="col-md-8">
+    <div class="col-md-4">
         <div class="logo-block">
             <a class="logo-a" ui-sref="main.home.basic" ui-sref-active="active">
                 <img src="img/logo.png" alt="">
                 <h2 class="logo text-uppercase"> Wheather forecast</h2>
             </a>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 nav-panel">
+        <div class="nav-buttons">
+            <a ui-sref="main.home.basic" ui-sref-active="active">Today's weather</a>
+            <a ui-sref="main.save" ui-sref-active="active">Save to db</a>
+            <a ng-if="authUser" ui-sref="main.admin" ui-sref-active="active">Admin area</a>
         </div>
     </div>
     <div class="col-md-4">

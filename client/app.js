@@ -84,6 +84,14 @@ angular
                     }
                 }
             })
-
+            .state('main.admin',{
+                url: 'admin',
+                views: {
+                    'content@main': {
+                        templateUrl: './templates/admin.html',
+                        controller: "AdminCtrl"
+                    }
+                }
+            })
 
     });

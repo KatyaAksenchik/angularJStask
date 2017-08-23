@@ -1,0 +1,120 @@
+<div class="padding-wrapper">
+    <h4 class="text-center">Maintaince cities:</h4>
+
+    <p>
+        <button class="btn btn-info" data-toggle="modal" data-target="#NewCityModal">Add city <i
+                class="fa fa-plus-circle"
+                aria-hidden="true"></i>
+        </button>
+    </p>
+
+    <table class="table table-hover">
+        <thead class="thead-default">
+        <tr>
+            <th>City ID</th>
+            <th>City name</th>
+            <th>Country</th>
+            <th>Country Code</th>
+            <th colspan="3">Image URL</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="city in citiesDB">
+            <td>{{city.idcity}}</td>
+            <td>{{city.name}}</td>
+            <td>{{city.country}}</td>
+            <td>{{city.countryCode}}</td>
+            <td>{{city.imgURL}}</td>
+            <td>
+                <button class="btn btn-success"
+                        ng-click="opemEditForm(city)">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-danger" ng-click="deleteItem(city)">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="NewCityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center" id="myModalLabel">Add new city:</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label" for="id">City id:</label>
+                    <input class="form-control" id="id" type="text" ng-model="newCity.idcity" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="name">City name:</label>
+                    <input class="form-control" id="name" type="text" ng-model="newCity.name" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="country">Country:</label>
+                    <input class="form-control" id="country" type="text" ng-model="newCity.country" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="code">Country Code:</label>
+                    <input class="form-control" id="code" type="text" ng-model="newCity.countryCode" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="url">Image URL:</label>
+                    <input class="form-control" id="url" type="text" ng-model="newCity.imgURL" required/>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-click="saveItem(newCity)">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="EditCityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center">Edit city:</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label" for="nameE">City name:</label>
+                    <input class="form-control" id="nameE" type="text" ng-model="currentCity.name"
+                           value="{{currentCity.name}}" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="countryE">Country:</label>
+                    <input class="form-control" id="countryE" type="text" ng-model="currentCity.country"
+                           value="{{currentCity.country}}" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="codeE">Country Code:</label>
+                    <input class="form-control" id="codeE" type="text" ng-model="currentCity.countryCode"
+                           value="{{currentCity.countryCode}}" required/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="urlE">Image URL:</label>
+                    <input class="form-control" id="urlE" type="text" ng-model="currentCity.imgURL"
+                           value="{{currentCity.country}}" required/>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-click="updateItem(currentCity)">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

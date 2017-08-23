@@ -1,6 +1,6 @@
 angular
     .module('app')
-    .controller('HeaderCtrl', ['$scope', 'UserService', function ($scope, UserService) {
+    .controller('HeaderCtrl', ['$scope', 'UserService', '$state', function ($scope, UserService, $state) {
         $scope.$watch(function () {
             return UserService.getUser();
         }, function (user) {
@@ -10,5 +10,6 @@ angular
 
         $scope.logout = function () {
             UserService.setUser(false, "");
+            $state.go("main.home.basic");
         }
     }]);

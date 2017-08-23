@@ -10,12 +10,12 @@ a {
     padding: 20px 0;
 }
 
-@media (max-width: 767px) {
-    .nav-panel {
-        height: auto;
-        padding-bottom: 5px;
-    }
-}
+/*@media (max-width: 767px) {*/
+/*.nav-panel {*/
+/*height: auto;*/
+/*padding-bottom: 5px;*/
+/*}*/
+/*}*/
 
 .container {
     width: 1140px;
@@ -58,18 +58,22 @@ a {
 }
 
 .nav-buttons {
-    margin: 30% 0;
+    /*margin: 30% 0;*/
+}
+
+.nav-panel {
+    padding: 12px 5px;
 }
 
 .nav-buttons a {
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    display: inline-block;
     padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 23px;
+    color: rgba(255, 255, 255, 0.99);
+    margin: 0 3px;
+    cursor: pointer;
+    background-color: rgba(73, 75, 113, 0.19);
 }
 
 .nav-buttons a:hover {
@@ -80,7 +84,6 @@ a {
 
 .blocks-weather {
     margin: 30px 0 0;
-    /*border: solid 2px #5278ab;*/
     border-right: none;
     border-left: none;
     padding-bottom: 20px;
@@ -219,4 +222,24 @@ div.tooltip {
     background-color: transparent;
     outline: none;
     border: none;
+}
+
+.fa-sign-out {
+    color: #000;
+}
+
+/*.fa-trash {*/
+    /*color: #e45757;*/
+/*}*/
+
+/*.fa-pencil-square-o {*/
+    /*color: #4ab54a;*/
+/*}*/
+
+.fa-trash, .fa-pencil-square-o {
+    color: white;
+}
+
+.page-wrap{
+    margin-bottom: 75px;
 }
