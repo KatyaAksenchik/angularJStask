@@ -27,10 +27,4 @@ module.exports = function (app, passport) {
 
         })(req, res, next);
     });
-
-    // app.get('/logout', function (req, res) {
-    //     req.logout();
-    //     // res.redirect('/');
-    // });
-
 };

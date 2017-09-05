@@ -27,6 +27,10 @@
                 <textarea class="form-control" id="textarea" rows="3" ng-model="weather.description"
                           ng-maxlength="number"></textarea>
             </div>
+            <div class="form-group">
+                <label class="control-label" for="file">Date:</label>
+                <input class="form-control" id="file" name="file" type="file" file-modal="weather.imageUrl"/>
+            </div>
             <p>{{weather}}</p>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary" ng-disabled="infoForm.$invalid">Submit</button>
@@ -34,4 +38,3 @@
         </form>
     </div>
 </div>
-

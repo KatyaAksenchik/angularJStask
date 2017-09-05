@@ -1,5 +1,5 @@
 angular
-    .module('app', ['ui.router', 'app.filters'])
+    .module('app', ['ui.router', 'app.filters', 'ngFileUpload'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.when("", "/home/basic");
         $urlRouterProvider.when("/", "/home/basic");
@@ -75,7 +75,7 @@ angular
                     }
                 }
             })
-            .state('main.signup',{
+            .state('main.signup', {
                 url: 'signup',
                 views: {
                     'content@main': {
@@ -84,7 +84,7 @@ angular
                     }
                 }
             })
-            .state('main.admin',{
+            .state('main.admin', {
                 url: 'admin',
                 views: {
                     'content@main': {

@@ -9,4 +9,4 @@ angular
             template: "<div id='chart'></div>",
             controller: "GraphCtrl"
         }
-    })
+    });

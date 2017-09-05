@@ -229,17 +229,49 @@ div.tooltip {
 }
 
 /*.fa-trash {*/
-    /*color: #e45757;*/
+/*color: #e45757;*/
 /*}*/
 
 /*.fa-pencil-square-o {*/
-    /*color: #4ab54a;*/
+/*color: #4ab54a;*/
 /*}*/
 
 .fa-trash, .fa-pencil-square-o {
     color: white;
 }
 
-.page-wrap{
+.page-wrap {
     margin-bottom: 75px;
 }
+
+.upload-file-name {
+    width: 180px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: -6px;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+/*input[type=file] {*/
+    /*visibility: hidden;*/
+    /*display: inline-block;*/
+    /*width: 130px;*/
+/*}*/
+
+.form-group {
+    position: relative;
+}
+
+/*#my-file-selector + label {*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+/*}*/
+
+/*.resp-image-upl {*/
+    /*margin-top: 10px;*/
+    /*font-size: 15px;*/
+/*}*/

@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var connection = require("../config/db");
 
+// console.log(upload);
+
 router.get('/cities', function (req, res) {
     var query = connection.query('select * from cities', function (err, result) {
         if (err) {
@@ -71,5 +73,6 @@ router.get('/info', function (req, res, next) {
         }
     })
 });
+
 
 module.exports = router;
